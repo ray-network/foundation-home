@@ -41,7 +41,7 @@ const Waiting = () => {
       <div className={style.containerInner}>
         <div
           className={style.containerInnerBg}
-          style={{ backgroundImage: "url(/resources/banners/night.jpg)" }}
+          style={{ backgroundImage: "url(/resources/banners/shift.jpg)" }}
         />
         <div className={style.containerInnerFade} />
         <div className="ray__block mb-0">
@@ -51,9 +51,10 @@ const Waiting = () => {
                 Ray Foundation
               </h1>
               <p className="mb-3">We exist to enable community-driven innovation to benefit people around the world.</p>
-              <p>
+              <p className="mb-3">
                 We are a non-profit foundation that is responsible for contracting protocol maintainers, funding ecosystem development, and shepherding core governance of the Ray Network.
               </p>
+              <p>Contact us: <a href="mailto:hello@raynetwork.io">hello@raynetwork.io</a></p>
               <div className="max-width-400 mb-5">
                 <Input.Search
                   placeholder="Enter your email"
