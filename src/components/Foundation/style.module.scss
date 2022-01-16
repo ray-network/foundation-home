@@ -1,0 +1,156 @@
+@import "@/styles/mixins";
+
+.container {
+  background: $white;
+  min-height: 100vh;
+
+  &Inner {
+    max-width: rem(1920);
+    margin: 0 auto;
+    padding: rem(20) 0;
+    position: relative;
+
+    &Bg {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: rem(30);
+    }
+
+    &Fade {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba($white, 0.3), rgba($white, 1));
+    }
+  }
+}
+
+.promo {
+  margin-bottom: rem(20);
+  border-radius: rem(14);
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  display: flex;
+  min-height: calc(100vh - 150px);
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  color: $white;
+
+  &Descr {
+    font-weight: 700;
+    margin-bottom: rem(30);
+    font-size: rem(21);
+  }
+
+  &Inner {
+    display: flex;
+    flex-direction: column;
+
+    &Badge {
+      font-size: rem(42);
+      // border: 3px solid $dark-gray-4;
+      background: $white;
+      color: $dark;
+      padding: rem(5) rem(15);
+      border-radius: rem(20);
+      font-weight: 700;
+      vertical-align: middle;
+    }
+
+    h1 {
+      font-size: rem(78);
+      font-weight: 900;
+      color: $dark;
+      max-width: rem(1280);
+      margin-bottom: rem(40);
+      position: relative;
+      padding-left: rem(50);
+      line-height: 1;
+
+      &::before {
+        content: "";
+        display: block;
+        width: rem(9);
+        height: 100%;
+        border-radius: 10px;
+        background: $blue;
+        position: absolute;
+        top: rem(4);
+        left: 0;
+      }
+
+      @media (max-width: $xxl-max-width) {
+        font-size: rem(64);
+      }
+
+      @media (max-width: $lg-max-width) {
+        font-size: rem(52);
+      }
+
+      @media (max-width: $md-max-width) {
+        padding-left: rem(25);
+      }
+
+      @media (max-width: $sm-max-width) {
+        font-size: rem(52);
+        line-height: 1.2;
+      }
+    }
+
+    p {
+      max-width: rem(980);
+      color: $dark-gray-2;
+      margin-bottom: rem(40);
+    }
+
+    // :global(.ant-input-group-addon) {
+    //   background: none;
+    // }
+
+    // :global(.ant-input-affix-wrapper) {
+    //   background: none;
+    //   border-color: $dark-gray-4;
+
+    //   input {
+    //     background: none;
+    //     color: $white;
+    //   }
+    // }
+  }
+
+  &Badge {
+    border: rem(6) solid $white;
+    line-height: 1;
+    display: inline-block;
+    border-radius: rem(14);
+    padding: 0 rem(7) 0 rem(5);
+    margin-left: rem(10);
+    font-weight: 700;
+  }
+
+  &Soon {
+    position: absolute !important;
+    top: rem(-6);
+    right: rem(-6);
+    background: $dark;
+    color: $white;
+    border-radius: rem(30);
+    font-size: rem(12);
+    display: inline-block;
+    padding: rem(4) rem(5) rem(3);
+    line-height: 1;
+  }
+}

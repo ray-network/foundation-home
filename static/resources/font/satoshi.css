@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Satoshi';
+  font-weight: 400;
+  font-style: normal;
+  src: url("fonts/satoshi-medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  font-weight: 700;
+  font-style: normal;
+  src: url("fonts/satoshi-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  font-weight: 900;
+  font-style: normal;
+  src: url("fonts/satoshi-black.ttf") format("truetype");
+}

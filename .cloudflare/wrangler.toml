@@ -1,0 +1,10 @@
+name = "foundation-home"
+type = "webpack"
+account_id = "792461088a4c863230f3faee467094b1"
+# workers_dev = true
+route = "ray.foundation/*"
+zone_id = "4643d55175c3ca6a88b2febd5abc2136"
+
+[site]
+bucket = "../public"
+entry-point = "workers-site"

@@ -1,0 +1,102 @@
+@import "@/styles/mixins";
+
+.outer {
+  background: $white;
+}
+
+.footer {
+  &Lists {
+    a {
+      color: $gray-5;
+
+      &:hover,
+      &:focus {
+        color: $dark;
+      }
+    }
+  }
+
+  &Top {
+    margin-bottom: rem(60);
+    padding-top: rem(80);
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+  }
+
+  &Ray {
+    display: inline-flex;
+    align-items: center;
+    font-size: rem(18);
+    color: $dark;
+
+    &:hover {
+      color: $blue;
+    }
+
+    svg {
+      margin-right: rem(10);
+      height: rem(24) !important;
+      width: auto !important;
+    }
+
+    strong {
+      font-weight: 900;
+    }
+  }
+
+  &Cardano {
+    display: inline-flex;
+    margin-right: rem(5);
+    position: relative;
+    z-index: 1;
+    top: rem(3);
+    color: $dark;
+
+    svg {
+      height: rem(18) !important;
+      width: auto !important;
+
+      * {
+        fill: $blue;
+      }
+    }
+  }
+
+  &App {
+    width: rem(40);
+    height: rem(40);
+    background: $dark;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 rem(10) rem(10) 0;
+    border-radius: 8px;
+    color: $white;
+    font-size: rem(18);
+
+    &:hover {
+      background: $dark-gray-4;
+      color: $white;
+    }
+  }
+}
+
+.dot {
+  display: inline-block;
+  height: rem(10);
+  width: rem(10);
+  border-radius: 20px;
+  background: $success;
+  margin-right: rem(7);
+}
+
+.status {
+  display: inline-block;
+  width: rem(10);
+  height: rem(10);
+  border-radius: 10px;
+  background: $success;
+  margin-right: rem(8);
+  position: relative;
+  top: -1px;
+}

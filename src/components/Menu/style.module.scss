@@ -1,0 +1,100 @@
+@import "@/styles/mixins";
+
+.container {
+  background: $white;
+  padding: rem(20) 0;
+  z-index: 5;
+  top: 0;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  &Logo {
+    width: rem(210);
+  }
+
+  &Descr {
+    color: $gray-4;
+    flex-grow: 1;
+  }
+
+  &Buttons {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: $md-max-width) {
+    &Descr {
+      display: none;
+    }
+
+    &Buttons {
+      margin-left: auto;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: rem(36);
+    height: rem(36);
+    margin-right: rem(10);
+  }
+
+  span {
+    font-weight: 900;
+    font-size: rem(18);
+    color: $dark;
+  }
+}
+
+.switchIcon {
+  height: rem(20);
+  width: rem(21);
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: rem(20);
+  user-select: none;
+
+  @media (max-width: $md-max-width) {
+    &:before {
+      top: rem(5) !important;
+    }
+
+    &:after {
+      top: rem(14) !important;
+    }
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: rem(6);
+    height: 2px;
+    width: 100%;
+    border-radius: 3px;
+    background: $white;
+    @include transition-fast();
+  }
+
+  &:after {
+    top: rem(13);
+  }
+
+  &:hover {
+    &:after,
+    &:before {
+      background: $gray-3;
+    }
+  }
+}
