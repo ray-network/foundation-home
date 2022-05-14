@@ -54,7 +54,10 @@ const Waiting = () => {
               <p className="mb-3">
                 We are a non-profit foundation that is responsible for contracting protocol maintainers, funding ecosystem development, and shepherding core governance of the Ray Network.
               </p>
-              <p>Contact us: <a href="mailto:hello@raynetwork.io">hello@raynetwork.io</a></p>
+              <p>
+                Contact us: <a href="mailto:hello@raynetwork.io" className="me-3">hello@raynetwork.io</a>
+                Homepage: <a href="https://raynetwork.io/" className="me-3">raynetwork.io</a>
+              </p>
               <div className="max-width-400 mb-5">
                 <Input.Search
                   placeholder="Enter your email"
@@ -68,7 +71,7 @@ const Waiting = () => {
                   loading={loading}
                 />
               </div>
-              <div>
+              {/* <div>
                 <a
                   href="https://raynetwork.io"
                   className="ray__btn ray__btn--round me-3 mb-3"
@@ -87,7 +90,7 @@ const Waiting = () => {
                   <span className="me-2">RayWallet</span>
                   <i className="ri ri-ext ri-arrow_up" />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

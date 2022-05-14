@@ -24,7 +24,7 @@ const Footer = () => {
                 </span>
               </a>
             </div>
-            <p className="mb-2 text-muted">
+            <p className="mb-2">
               {new Date().getFullYear()} &copy; Ray Foundation DAO | Advanced
               Ecosystem for Cardano Blockchain Platform.{" "}
               <span>
@@ -41,7 +41,7 @@ const Footer = () => {
                 </a>
               </span>
             </p>
-            <p className="mb-2 text-muted">
+            <p className="mb-2">
               <span className="me-2 text-capitalize">
                 <span className={style.status} />
                 Cardano Mainnet: Epoch {networkState?.currentEpoch?.number || 0}

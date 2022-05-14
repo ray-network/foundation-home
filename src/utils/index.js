@@ -1,5 +1,7 @@
 import React from "react"
 
+export const notSSR = typeof window !== "undefined"
+
 export const truncate = (x) => {
   return x ? `${x.substring(0, 8)}...${x.slice(-8)}` : ""
 }

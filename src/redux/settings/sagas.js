@@ -4,6 +4,7 @@ import actions from "./actions"
 import { getNetworkInfo } from "@/services/graphql"
 import { getPrices } from "@/services/coingecko"
 import { getPools, getHistory } from "@/services/distr"
+import { notSSR } from "@/utils"
 
 export function* CHANGE_SETTING({ payload: { setting, value } }) {
   yield store.set(`ray.wallet.settings.${setting}`, value)
@@ -79,10 +80,12 @@ export function* FETCH_HISTORY() {
 }
 
 export function* SETUP() {
-  yield call(FETCH_NETWORK_STATE)
-  // yield call(FETCH_HISTORY)
-  // yield call(FETCH_PRICES)
-  // yield call(FETCH_POOLS)
+  if (notSSR) {
+    yield call(FETCH_NETWORK_STATE)
+    // yield call(FETCH_HISTORY)
+    // yield call(FETCH_PRICES)
+    // yield call(FETCH_POOLS)
+  }
 }
 
 export default function* rootSaga() {
