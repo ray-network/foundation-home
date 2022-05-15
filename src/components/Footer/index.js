@@ -1,6 +1,7 @@
 import React from "react"
 import { useSelector } from "react-redux"
 import { SVGRay, SVGCardano } from "@/svg"
+import { format } from "@/utils"
 import * as style from "./style.module.scss"
 
 const Footer = () => {
@@ -24,9 +25,10 @@ const Footer = () => {
                 </span>
               </a>
             </div>
-            <p className="mb-2">
-              {new Date().getFullYear()} &copy; Ray Foundation DAO | Advanced
-              Ecosystem for Cardano Blockchain Platform.{" "}
+            <p className="mb-1 text-muted">
+              {new Date().getFullYear()} &copy;{" "}
+              <a href="https://ray.foundation" target="_blank" rel="noopener noreferrer" className="text-muted"><u>Ray Foundation DAO</u></a>{" "}
+              · Advanced Ecosystem for Cardano Blockchain Platform ·{" "}
               <span>
                 <span>Powered with</span>{" "}
                 <a
@@ -41,15 +43,14 @@ const Footer = () => {
                 </a>
               </span>
             </p>
-            <p className="mb-2">
+            <p className="mb-2 text-muted">
               <span className="me-2 text-capitalize">
                 <span className={style.status} />
-                Cardano Mainnet: Epoch {networkState?.currentEpoch?.number || 0}
-                , Block {networkState?.tip?.number || 0}, Slot{" "}
-                {networkState?.tip?.slotNo || 0}
+                Cardano Mainnet: Epoch {networkState?.currentEpoch?.number || 0}{" "}
+                · Block {format(networkState?.tip?.number || 0)} · Slot{" "}
+                {format(networkState?.tip?.slotNo || 0)}
               </span>
             </p>
-            <p className="mb-0 text-muted"></p>
           </div>
         </div>
       </div>
