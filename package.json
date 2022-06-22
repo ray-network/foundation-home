@@ -19,7 +19,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "build-deploy": "yarn build && cd .cloudflare/ && wrangler publish"
+    "deploy": "wrangler pages publish public --project-name=$npm_package_name --commit-dirty=true",
+    "build-deploy": "npm run clean && npm run build && npm run deploy"
   },
   "dependencies": {
     "antd": "^4.16.8",
